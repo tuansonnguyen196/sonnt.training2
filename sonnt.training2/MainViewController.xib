@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="sonnt_training2" customModuleProvider="target">
+            <connections>
+                <outlet property="expandSwitch" destination="JfC-Ph-c0v" id="Yox-UQ-wWV"/>
+                <outlet property="listPersonTableView" destination="fHG-w9-8XF" id="8a3-tc-gbV"/>
+                <outlet property="segment" destination="Vn4-Nh-ph0" id="z7P-vF-pKw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="foy-5N-j2U">
+                    <rect key="frame" x="8" y="15" width="398" height="31"/>
+                    <subviews>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vn4-Nh-ph0">
+                            <rect key="frame" x="0.0" y="0.0" width="245" height="32"/>
+                            <segments>
+                                <segment title="Đang cho vay"/>
+                                <segment title="Đang vay"/>
+                            </segments>
+                            <connections>
+                                <action selector="segmentAction:" destination="-1" eventType="valueChanged" id="YFJ-bb-3Uc"/>
+                            </connections>
+                        </segmentedControl>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DS rút gọn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLl-qV-had">
+                            <rect key="frame" x="256" y="0.0" width="82" height="31"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JfC-Ph-c0v">
+                            <rect key="frame" x="349" y="0.0" width="51" height="31"/>
+                            <connections>
+                                <action selector="expandAction:" destination="-1" eventType="valueChanged" id="RAv-h1-5wQ"/>
+                            </connections>
+                        </switch>
+                    </subviews>
+                </stackView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fHG-w9-8XF">
+                    <rect key="frame" x="0.0" y="76" width="414" height="786"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="MOg-fK-lam"/>
+                        <outlet property="delegate" destination="-1" id="kdl-vY-TWe"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="foy-5N-j2U" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="2Es-bj-UMF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fHG-w9-8XF" secondAttribute="trailing" id="HNV-84-bLg"/>
+                <constraint firstItem="fHG-w9-8XF" firstAttribute="top" secondItem="foy-5N-j2U" secondAttribute="bottom" constant="30" id="IJP-ge-gF2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fHG-w9-8XF" secondAttribute="bottom" id="SxL-41-sZ7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="foy-5N-j2U" secondAttribute="trailing" constant="8" id="bkJ-FF-OAJ"/>
+                <constraint firstItem="foy-5N-j2U" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="c76-dv-y42"/>
+                <constraint firstItem="fHG-w9-8XF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rlg-2u-va7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="128.57142857142856"/>
+        </view>
+    </objects>
+</document>

@@ -15,6 +15,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func enterAction(_ sender: Any) {
+        self.present(MainViewController(), animated: true, completion: nil)
+    }
 }
 
